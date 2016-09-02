@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jautocomplete</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="navbar navbar-default">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<a href="#" class="navbar-brand">AUTOCOMPLETE</a>
+  			</div>
+  			<ul class="nav navbar-nav navbar-right">
+  				<li><input type="text" class="txt-search" id="books-search-txt" autofocus placeholder="Search.." style="margin-top: 13px;padding-left: 10px; padding-right: 10px;"></li>
+  				<li><a href="#">Home</a></li>
+  				<li><a href="#">Portfolio</a></li>
+  				<li><a href="#">Event</a></li>
+  			</ul>
+  		</div>
+  	</div>
+  	<div class="container">
+	    <%= yield %>
+  	</div>
+  </body>
+</html>

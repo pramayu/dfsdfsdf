@@ -1,0 +1,17 @@
+<div class="row">
+<% @books.each do |book| %>
+  <div class="col-sm-6 col-md-4" style="width: 24.333333%;">
+    <div class="thumbnail">
+      <%= image_tag book.image_url %>
+      <div class="caption">
+        <h3 class="text-center"><%= truncate(book.title, length: 20)%></h3>
+      </div>
+    </div>
+  </div>
+<% end %> 
+</div>
+<script>
+  $(function() {
+    new app.Books;
+  });
+</script>
