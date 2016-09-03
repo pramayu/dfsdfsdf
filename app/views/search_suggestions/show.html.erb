@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @search_suggestion.term %>
+</p>
+
+<p>
+  <strong>Popularity:</strong>
+  <%= @search_suggestion.popularity %>
+</p>
+
+<%= link_to 'Edit', edit_search_suggestion_path(@search_suggestion) %> |
+<%= link_to 'Back', search_suggestions_path %>

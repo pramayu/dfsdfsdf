@@ -4,11 +4,15 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
-    respond_to do |format|
-      format.html
-      format.json { @books = Book.search(params[:term]) }
+    if params[:search].present?
+      @books = Book.search(params[:search])
+    else
+      @books = Book.all
     end
+    # respond_to do |format|
+    #   format.html
+    #   format.json { @books = Book.search(params[:term]) }
+    # end
   end
 
   # GET /books/1
